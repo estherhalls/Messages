@@ -27,6 +27,7 @@ class MessageListTableViewController: UITableViewController {
        guard let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as? MessageTableViewCell else {return UITableViewCell()}
         let message = messageController.messages[indexPath.row]
         cell.updateViews(message: message)
+        cell.delegate = self
 
         return cell
     }
@@ -66,3 +67,13 @@ class MessageListTableViewController: UITableViewController {
     }
     
 } // End of Class
+
+// MARK: - MessageTableViewCellDelegate Conformance
+extension MessageListTableViewController: MessageTableViewCellDelegate {
+    func markAsReadButtonTapped(cell: MessageTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else {return}
+                let message = messageController.messages[indexPath.row]
+                messageController.toggleRead(message: message)
+                cell.updateViews(message: message)
+    }
+}

@@ -6,6 +6,9 @@
 //
 
 import UIKit
+protocol MessageTableViewCellDelegate: AnyObject {
+    func markAsReadButtonTapped(cell: MessageTableViewCell)
+}
 /// A custom table view cell used for rendering the contents of a Message instance
 class MessageTableViewCell: UITableViewCell {
     
@@ -21,6 +24,8 @@ class MessageTableViewCell: UITableViewCell {
   
     /// A date formatter used to conver the messages date into a coherent string
     var dateFormatter = DateFormatter.short()
+    weak var delegate: MessageTableViewCellDelegate?
+    
     // MARK: - Methods
     
     /// Updates the table view cells views for the given messages content
@@ -36,6 +41,7 @@ class MessageTableViewCell: UITableViewCell {
     // MARK: - Actions
     
     @IBAction func messageReadButtonTapped(_ sender: Any) {
+        delegate?.markAsReadButtonTapped(cell: self)
     }
     
     
