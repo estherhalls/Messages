@@ -16,8 +16,10 @@ class MessageController {
     init() {
         loadMessages()
     }
+    
     /// The array of messages and source of truth for the app
     private (set) var messages: [Message] = []
+    
     /// The URL that messages are persist to on disk
     private var fileURL: URL? {
         guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
@@ -28,7 +30,7 @@ class MessageController {
     
     /// Creates a new message, adds it to our array of messages (source of truth) and persists the message to the local disk
     /// - Parameter text: The content of the message
-    func create(text: String = "New Message") {
+    func create(text: String) {
         let message = Message(text: text)
         messages.append(message)
         saveMessages()
