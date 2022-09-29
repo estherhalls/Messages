@@ -120,6 +120,9 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                     <color key="baseBackgroundColor" red="0.14128971553242281" green="0.29684398327704903" blue="0.45467604804284789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="markAllAsReadButtonTapped:" destination="qOM-s6-PTk" eventType="touchUpInside" id="n0E-9t-tkE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDY-Oj-rYm"/>

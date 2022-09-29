@@ -48,6 +48,12 @@ class MessageController {
         message.isRead.toggle()
         saveMessages()
     }
+    /// $0 is shorthand for whatever message it is currently working on (index 0)
+    /// forEach is a higher order function, shorthand for-in loops
+    func markAllAsRead() {
+        messages.forEach {$0.isRead = true}
+        saveMessages()
+    }
     
     /// Persists the message controllers array of messages to disk
     func saveMessages() {

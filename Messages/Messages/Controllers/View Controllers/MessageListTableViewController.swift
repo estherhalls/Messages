@@ -13,8 +13,9 @@ class MessageListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        // Listener == Observer
+        /// Not bringing any objects with us, so it's nil
+        NotificationCenter.default.addObserver(self, selector: #selector(markAllAsRead), name: markAllAsReadNotificationName, object: nil)
     }
 
     // MARK: - Table view data source
@@ -58,6 +59,11 @@ class MessageListTableViewController: UITableViewController {
         alertController.addAction(dismissAction)
         alertController.addAction(saveAction)
         present(alertController, animated: true)
+    }
+    
+    @objc func markAllAsRead() {
+        messageController.markAllAsRead()
+        tableView.reloadData()
     }
     
     // MARK: - Actions

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+// Declaring outside of class is a global property
+let markAllAsReadNotificationName = NSNotification.Name("MarkAllAsRead")
 
 class MessagesReadViewController: UIViewController {
 
@@ -26,4 +28,9 @@ class MessagesReadViewController: UIViewController {
     }
     */
 
-}
+    @IBAction func markAllAsReadButtonTapped(_ sender: UIButton) {
+        // Create one to many relationship between button and all cell objects
+        NotificationCenter.default.post(name: markAllAsReadNotificationName, object: nil)
+    }
+    
+} // End of Class
