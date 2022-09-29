@@ -105,27 +105,41 @@
             </objects>
             <point key="canvasLocation" x="-667" y="78"/>
         </scene>
-        <!--View Controller-->
+        <!--Status-->
         <scene sceneID="g2N-uW-ftG">
             <objects>
-                <viewController id="qOM-s6-PTk" sceneMemberID="viewController">
+                <viewController id="qOM-s6-PTk" customClass="MessagesReadViewController" customModule="Messages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rey-2z-A2g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93X-GH-kFU">
+                                <rect key="frame" x="121.5" y="411.5" width="171.5" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Mark All As Read" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                    <color key="baseBackgroundColor" red="0.14128971553242281" green="0.29684398327704903" blue="0.45467604804284789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDY-Oj-rYm"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" red="0.80188829136318018" green="1" blue="0.94775622041304319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="93X-GH-kFU" firstAttribute="centerX" secondItem="vDY-Oj-rYm" secondAttribute="centerX" id="ZfP-Mo-pSj"/>
+                            <constraint firstItem="93X-GH-kFU" firstAttribute="centerY" secondItem="vDY-Oj-rYm" secondAttribute="centerY" id="o8D-Gq-f2y"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="G8U-7j-cgK"/>
+                    <tabBarItem key="tabBarItem" title="Status" image="list.dash.header.rectangle" catalog="system" selectedImage="list.dash.header.rectangle" id="G8U-7j-cgK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKX-V2-IRN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1742" y="78"/>
         </scene>
-        <!--Item-->
+        <!--Messages-->
         <scene sceneID="nTB-1i-HhQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z4o-dz-pD5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="8Oo-G8-LgS"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="message" catalog="system" selectedImage="message" id="8Oo-G8-LgS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vsQ-Si-cHS">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
@@ -143,14 +157,13 @@
     </scenes>
     <resources>
         <image name="circle" catalog="system" width="128" height="123"/>
+        <image name="list.dash.header.rectangle" catalog="system" width="128" height="93"/>
+        <image name="message" catalog="system" width="128" height="116"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

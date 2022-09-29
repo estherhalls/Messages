@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB26F0B928E6052B008E616F /* MessagesReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB26F0B828E6052B008E616F /* MessagesReadViewController.swift */; };
 		EB6E3ACF28E4A57C00C01294 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E3ACE28E4A57C00C01294 /* Message.swift */; };
 		EB6E3AD228E4A86B00C01294 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E3AD128E4A86B00C01294 /* MessageController.swift */; };
 		EB6E3AD528E4B98000C01294 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E3AD428E4B98000C01294 /* DateFormatterExtension.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB26F0B828E6052B008E616F /* MessagesReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesReadViewController.swift; sourceTree = "<group>"; };
 		EB6E3ACE28E4A57C00C01294 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		EB6E3AD128E4A86B00C01294 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		EB6E3AD428E4B98000C01294 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				EB86BC6728E4A0BF00731945 /* MessageListTableViewController.swift */,
+				EB26F0B828E6052B008E616F /* MessagesReadViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				EB6E3AD228E4A86B00C01294 /* MessageController.swift in Sources */,
 				EB6E3AD528E4B98000C01294 /* DateFormatterExtension.swift in Sources */,
 				EB86BC6C28E4A16800731945 /* MessageTableViewCell.swift in Sources */,
+				EB26F0B928E6052B008E616F /* MessagesReadViewController.swift in Sources */,
 				EB6E3ACF28E4A57C00C01294 /* Message.swift in Sources */,
 				EB86BC6828E4A0BF00731945 /* MessageListTableViewController.swift in Sources */,
 				EB86BC5628E49AAD00731945 /* SceneDelegate.swift in Sources */,
